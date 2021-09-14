@@ -1,0 +1,4 @@
+Warning[203] C:\USERS\REVER\DOCUMENTS\AI4E5MICRO2SEM21\LED.X\LED.ASM 13 : Found opcode in column 1. (GOTO)
+Message[305] C:\USERS\REVER\DOCUMENTS\AI4E5MICRO2SEM21\LED.X\LED.ASM 16 : Using default destination of 1 (file).
+Message[305] C:\USERS\REVER\DOCUMENTS\AI4E5MICRO2SEM21\LED.X\LED.ASM 23 : Using default destination of 1 (file).
+Message[302] C:\USERS\REVER\DOCUMENTS\AI4E5MICRO2SEM21\LED.X\LED.ASM 31 : Register in operand not in bank 0.  Ensure that bank bits are correct.
