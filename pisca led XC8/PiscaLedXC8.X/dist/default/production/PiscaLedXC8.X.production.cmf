@@ -11,13 +11,15 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
+$C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
 end_init CODE 0 0 0 1 2
+config CONFIG 4 2007 2007 1 2
 $dist/default/production\PiscaLedXC8.X.production.o
 cinit CODE 0 7FE 7FE 2 2
 text1 CODE 0 7C0 7C0 9 2
 maintext CODE 0 7C9 7C9 35 2
 cstackCOMMON COMMON 1 70 70 3 1
+config CONFIG 4 2007 2007 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -40,7 +42,6 @@ SFR1 80-9F 1
 SFR2 100-11F 1
 SFR3 180-1EF 1
 COMMON 73-7D 1
-CONFIG 2007-2007 2
 EEDATA 2100-217F 2
 STRCODE 1-7BF 2
 STRING 1-7BF 2
@@ -58,31 +59,31 @@ STRING 1-7BF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PiscaLedXC8.X.production.o
-7FE cinit CODE >257:C:\Users\Rever\AppData\Local\Temp\xcAsca0.s
-7FE cinit CODE >260:C:\Users\Rever\AppData\Local\Temp\xcAsca0.s
-7FE cinit CODE >266:C:\Users\Rever\AppData\Local\Temp\xcAsca0.s
-7FE cinit CODE >268:C:\Users\Rever\AppData\Local\Temp\xcAsca0.s
-7FF cinit CODE >269:C:\Users\Rever\AppData\Local\Temp\xcAsca0.s
-7C0 text1 CODE >4:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C0 text1 CODE >6:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C2 text1 CODE >7:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C3 text1 CODE >8:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C4 text1 CODE >9:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C6 text1 CODE >10:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C7 text1 CODE >11:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C8 text1 CODE >12:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C9 maintext CODE >14:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7C9 maintext CODE >16:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7CA maintext CODE >19:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7CD maintext CODE >20:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7CE maintext CODE >21:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7DB maintext CODE >22:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7DE maintext CODE >23:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7DF maintext CODE >24:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7EC maintext CODE >25:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7EF maintext CODE >26:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7F0 maintext CODE >27:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
-7FD maintext CODE >28:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7FE cinit CODE >265:C:\Users\Rever\AppData\Local\Temp\xcAs1pc.s
+7FE cinit CODE >268:C:\Users\Rever\AppData\Local\Temp\xcAs1pc.s
+7FE cinit CODE >274:C:\Users\Rever\AppData\Local\Temp\xcAs1pc.s
+7FE cinit CODE >276:C:\Users\Rever\AppData\Local\Temp\xcAs1pc.s
+7FF cinit CODE >277:C:\Users\Rever\AppData\Local\Temp\xcAs1pc.s
+7C0 text1 CODE >13:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C0 text1 CODE >15:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C2 text1 CODE >16:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C3 text1 CODE >17:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C4 text1 CODE >18:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C6 text1 CODE >19:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C7 text1 CODE >20:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C8 text1 CODE >21:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C9 maintext CODE >23:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7C9 maintext CODE >25:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7CA maintext CODE >28:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7CD maintext CODE >29:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7CE maintext CODE >30:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7DB maintext CODE >31:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7DE maintext CODE >32:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7DF maintext CODE >33:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7EC maintext CODE >34:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7EF maintext CODE >35:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7F0 maintext CODE >36:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+7FD maintext CODE >37:C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -100,31 +101,32 @@ __Hspace_0 800 0 ABS 0 - -
 __Hspace_1 73 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
+___sp 0 0 STACK 2 stack C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
 _main F92 0 CODE 0 maintext dist/default/production\PiscaLedXC8.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\PiscaLedXC8.X.production.o
-start 0 0 CODE 0 init C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
+start 0 0 CODE 0 init C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
 __size_of_main 0 0 ABS 0 - dist/default/production\PiscaLedXC8.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
 wtemp0 7E 0 ABS 0 - dist/default/production\PiscaLedXC8.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
-___stacklo 0 0 ABS 0 - C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
+___stackhi 0 0 ABS 0 - C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
+___stacklo 0 0 ABS 0 - C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
 start_initialization FFC 0 CODE 0 cinit dist/default/production\PiscaLedXC8.X.production.o
 _TRISB0 430 0 ABS 0 - dist/default/production\PiscaLedXC8.X.production.o
 _TRISB2 432 0 ABS 0 - dist/default/production\PiscaLedXC8.X.production.o
 _TRISB4 434 0 ABS 0 - dist/default/production\PiscaLedXC8.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
+___int_sp 0 0 STACK 2 stack C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -133,6 +135,7 @@ __Hcinit 1000 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -162,13 +165,15 @@ __S1 73 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Rever\AppData\Local\Temp\xcAsca0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Rever\AppData\Local\Temp\xcAs1pc.o
 __pmaintext F92 0 CODE 0 maintext dist/default/production\PiscaLedXC8.X.production.o
 __Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 end_of_initialization FFC 0 CODE 0 cinit dist/default/production\PiscaLedXC8.X.production.o

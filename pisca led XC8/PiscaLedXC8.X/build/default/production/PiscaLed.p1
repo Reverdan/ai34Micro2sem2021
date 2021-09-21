@@ -24,6 +24,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF461 ~T0 @X0 0 e ]
 [p i __delay ]
+"1 PiscaLed.c
+[p x FOSC  =  HS         ]
+"2
+[p x WDTE  =  OFF        ]
+"3
+[p x PWRTE  =  OFF       ]
+"4
+[p x MCLRE  =  ON        ]
+"5
+[p x BOREN  =  OFF       ]
+"6
+[p x LVP  =  OFF         ]
+"7
+[p x CPD  =  OFF         ]
+"8
+[p x CP  =  OFF          ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f628a.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f628a.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -135,89 +151,89 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1269
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f628a.h: 1269: __asm("VRCON equ 09Fh");
 [; <" VRCON equ 09Fh ;# ">
-"4 PiscaLed.c
-[; ;PiscaLed.c: 4: void configuracao()
+"13 PiscaLed.c
+[; ;PiscaLed.c: 13: void configuracao()
 [v _configuracao `(v ~T0 @X0 1 ef ]
-"5
-[; ;PiscaLed.c: 5: {
+"14
+[; ;PiscaLed.c: 14: {
 {
 [e :U _configuracao ]
 [f ]
-"6
-[; ;PiscaLed.c: 6:     TRISB0 = 0;
+"15
+[; ;PiscaLed.c: 15:     TRISB0 = 0;
 [e = _TRISB0 -> -> 0 `i `b ]
-"7
-[; ;PiscaLed.c: 7:     TRISB2 = 0;
+"16
+[; ;PiscaLed.c: 16:     TRISB2 = 0;
 [e = _TRISB2 -> -> 0 `i `b ]
-"8
-[; ;PiscaLed.c: 8:     TRISB4 = 0;
+"17
+[; ;PiscaLed.c: 17:     TRISB4 = 0;
 [e = _TRISB4 -> -> 0 `i `b ]
-"9
-[; ;PiscaLed.c: 9:     PORTBbits.RB0 = 0;
+"18
+[; ;PiscaLed.c: 18:     PORTBbits.RB0 = 0;
 [e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"10
-[; ;PiscaLed.c: 10:     PORTBbits.RB2 = 0;
+"19
+[; ;PiscaLed.c: 19:     PORTBbits.RB2 = 0;
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"11
-[; ;PiscaLed.c: 11:     PORTBbits.RB4 = 0;
+"20
+[; ;PiscaLed.c: 20:     PORTBbits.RB4 = 0;
 [e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
-"12
-[; ;PiscaLed.c: 12: }
+"21
+[; ;PiscaLed.c: 21: }
 [e :UE 51 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"14
-[; ;PiscaLed.c: 14: void main()
+"23
+[; ;PiscaLed.c: 23: void main()
 [v _main `(v ~T0 @X0 1 ef ]
-"15
-[; ;PiscaLed.c: 15: {
+"24
+[; ;PiscaLed.c: 24: {
 {
 [e :U _main ]
 [f ]
-"16
-[; ;PiscaLed.c: 16:     configuracao();
+"25
+[; ;PiscaLed.c: 25:     configuracao();
 [e ( _configuracao ..  ]
-"17
-[; ;PiscaLed.c: 17:     for(;;)
+"26
+[; ;PiscaLed.c: 26:     for(;;)
 {
 [e :U 53 ]
-"18
-[; ;PiscaLed.c: 18:     {
-{
-"19
-[; ;PiscaLed.c: 19:         PORTBbits.RB4 = 0x00;
-[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
-"20
-[; ;PiscaLed.c: 20:         PORTBbits.RB0 = 0x01;
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"21
-[; ;PiscaLed.c: 21:         _delay((unsigned long)((1000)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"22
-[; ;PiscaLed.c: 22:         PORTBbits.RB0 = 0x00;
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"23
-[; ;PiscaLed.c: 23:         PORTBbits.RB2 = 0x01;
-[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-"24
-[; ;PiscaLed.c: 24:         _delay((unsigned long)((200)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"25
-[; ;PiscaLed.c: 25:         PORTBbits.RB2 = 0x00;
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"26
-[; ;PiscaLed.c: 26:         PORTBbits.RB4 = 0x01;
-[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
 "27
-[; ;PiscaLed.c: 27:         _delay((unsigned long)((1500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;PiscaLed.c: 27:     {
+{
 "28
-[; ;PiscaLed.c: 28:     }
+[; ;PiscaLed.c: 28:         PORTBbits.RB4 = 0x00;
+[e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
+"29
+[; ;PiscaLed.c: 29:         PORTBbits.RB0 = 0x01;
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
+"30
+[; ;PiscaLed.c: 30:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"31
+[; ;PiscaLed.c: 31:         PORTBbits.RB0 = 0x00;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"32
+[; ;PiscaLed.c: 32:         PORTBbits.RB2 = 0x01;
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
+"33
+[; ;PiscaLed.c: 33:         _delay((unsigned long)((200)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"34
+[; ;PiscaLed.c: 34:         PORTBbits.RB2 = 0x00;
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+"35
+[; ;PiscaLed.c: 35:         PORTBbits.RB4 = 0x01;
+[e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
+"36
+[; ;PiscaLed.c: 36:         _delay((unsigned long)((1500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"37
+[; ;PiscaLed.c: 37:     }
 }
 [e $U 53  ]
 [e :U 54 ]
 }
-"29
-[; ;PiscaLed.c: 29: }
+"38
+[; ;PiscaLed.c: 38: }
 [e :UE 52 ]
 }
