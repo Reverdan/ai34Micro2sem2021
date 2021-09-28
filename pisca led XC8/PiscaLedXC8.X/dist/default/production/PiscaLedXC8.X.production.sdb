@@ -11,11 +11,11 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"13 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+"26 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
 [v _configuracao configuracao `(v  1 e 1 0 ]
-"23
+"38
 [v _main main `(v  1 e 1 0 ]
-[s S25 . 1 `uc 1 RB0 1 0 :1:0 
+[s S23 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -24,22 +24,18 @@
 `uc 1 RB6 1 0 :1:6 
 `uc 1 RB7 1 0 :1:7 
 ]
-"245 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f628a.h
-[u S34 . 1 `S25 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES34  1 e 1 @6 ]
-"1632
-[v _TRISB0 TRISB0 `VEb  1 e 0 @1072 ]
-"1638
-[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
-"1644
-[v _TRISB4 TRISB4 `VEb  1 e 0 @1076 ]
-"23 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+"246 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16f628a.h
+[u S32 . 1 `S23 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES32  1 e 1 @6 ]
+"970
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"38 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
 [v _main main `(v  1 e 1 0 ]
 {
-"38
+"53
 } 0
-"13
+"26
 [v _configuracao configuracao `(v  1 e 1 0 ]
 {
-"21
+"36
 } 0
