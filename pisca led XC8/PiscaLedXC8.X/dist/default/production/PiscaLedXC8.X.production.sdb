@@ -11,9 +11,9 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"26 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+"37 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
 [v _configuracao configuracao `(v  1 e 1 0 ]
-"38
+"52
 [v _main main `(v  1 e 1 0 ]
 [s S23 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
@@ -29,13 +29,13 @@
 [v _PORTBbits PORTBbits `VES32  1 e 1 @6 ]
 "970
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-"38 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
+"52 C:\Users\Rever\Documents\GitHub\ai34Micro2sem2021\pisca led XC8\PiscaLedXC8.X\PiscaLed.c
 [v _main main `(v  1 e 1 0 ]
 {
-"53
+"77
 } 0
-"26
+"37
 [v _configuracao configuracao `(v  1 e 1 0 ]
 {
-"36
+"50
 } 0

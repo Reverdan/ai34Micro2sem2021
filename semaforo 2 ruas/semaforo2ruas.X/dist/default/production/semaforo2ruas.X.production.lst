@@ -1,0 +1,483 @@
+
+
+Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
+                                                                                               Mon Oct 04 20:16:23 2021
+
+Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
+     1                           	processor	16F628A
+     2                           	pagewidth 120
+     3                           	opt	flic
+     4                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     5                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     6                           	psect	maintext,global,class=CODE,split=1,delta=2
+     7                           	psect	text1,local,class=CODE,merge=1,delta=2
+     8                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+     9                           	dabs	1,0x7E,2
+    10  0000                     
+    11                           ; Version 2.32
+    12                           ; Generated 02/02/2021 GMT
+    13                           ; 
+    14                           ; Copyright © 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    15                           ; All rights reserved.
+    16                           ; 
+    17                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    18                           ; 
+    19                           ; Redistribution and use in source and binary forms, with or without modification, are
+    20                           ; permitted provided that the following conditions are met:
+    21                           ; 
+    22                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    23                           ;        conditions and the following disclaimer.
+    24                           ; 
+    25                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    26                           ;        of conditions and the following disclaimer in the documentation and/or other
+    27                           ;        materials provided with the distribution. Publication is not required when
+    28                           ;        this file is used in an embedded application.
+    29                           ; 
+    30                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    31                           ;        software without specific prior written permission.
+    32                           ; 
+    33                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    34                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    35                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    36                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    37                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    38                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    39                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    40                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    41                           ; 
+    42                           ; 
+    43                           ; Code-generator required, PIC16F628A Definitions
+    44                           ; 
+    45                           ; SFR Addresses
+    46  0000                     	;# 
+    47  0001                     	;# 
+    48  0002                     	;# 
+    49  0003                     	;# 
+    50  0004                     	;# 
+    51  0005                     	;# 
+    52  0006                     	;# 
+    53  000A                     	;# 
+    54  000B                     	;# 
+    55  000C                     	;# 
+    56  000E                     	;# 
+    57  000E                     	;# 
+    58  000F                     	;# 
+    59  0010                     	;# 
+    60  0011                     	;# 
+    61  0012                     	;# 
+    62  0015                     	;# 
+    63  0015                     	;# 
+    64  0016                     	;# 
+    65  0017                     	;# 
+    66  0018                     	;# 
+    67  0019                     	;# 
+    68  001A                     	;# 
+    69  001F                     	;# 
+    70  0081                     	;# 
+    71  0085                     	;# 
+    72  0086                     	;# 
+    73  008C                     	;# 
+    74  008E                     	;# 
+    75  0092                     	;# 
+    76  0098                     	;# 
+    77  0099                     	;# 
+    78  009A                     	;# 
+    79  009B                     	;# 
+    80  009C                     	;# 
+    81  009D                     	;# 
+    82  009F                     	;# 
+    83  0000                     	;# 
+    84  0001                     	;# 
+    85  0002                     	;# 
+    86  0003                     	;# 
+    87  0004                     	;# 
+    88  0005                     	;# 
+    89  0006                     	;# 
+    90  000A                     	;# 
+    91  000B                     	;# 
+    92  000C                     	;# 
+    93  000E                     	;# 
+    94  000E                     	;# 
+    95  000F                     	;# 
+    96  0010                     	;# 
+    97  0011                     	;# 
+    98  0012                     	;# 
+    99  0015                     	;# 
+   100  0015                     	;# 
+   101  0016                     	;# 
+   102  0017                     	;# 
+   103  0018                     	;# 
+   104  0019                     	;# 
+   105  001A                     	;# 
+   106  001F                     	;# 
+   107  0081                     	;# 
+   108  0085                     	;# 
+   109  0086                     	;# 
+   110  008C                     	;# 
+   111  008E                     	;# 
+   112  0092                     	;# 
+   113  0098                     	;# 
+   114  0099                     	;# 
+   115  009A                     	;# 
+   116  009B                     	;# 
+   117  009C                     	;# 
+   118  009D                     	;# 
+   119  009F                     	;# 
+   120  0006                     _PORTB	set	6
+   121  0086                     _TRISB	set	134
+   122                           
+   123                           	psect	cinit
+   124  07FE                     start_initialization:	
+   125                           ; #config settings
+   126                           
+   127  07FE                     __initialization:
+   128  07FE                     end_of_initialization:	
+   129                           ;End of C runtime variable initialization code
+   130                           
+   131  07FE                     __end_of__initialization:
+   132  07FE  0183               	clrf	3
+   133  07FF  2FB7               	ljmp	_main	;jump to C main() function
+   134                           
+   135                           	psect	cstackCOMMON
+   136  0070                     __pcstackCOMMON:
+   137  0070                     ?_configuracao:
+   138  0070                     ??_configuracao:	
+   139                           ; 1 bytes @ 0x0
+   140                           
+   141  0070                     ?_main:	
+   142                           ; 1 bytes @ 0x0
+   143                           
+   144  0070                     ??_main:	
+   145                           ; 1 bytes @ 0x0
+   146                           
+   147                           
+   148                           ; 1 bytes @ 0x0
+   149  0070                     	ds	3
+   150                           
+   151                           	psect	maintext
+   152  07B7                     __pmaintext:	
+   153 ;;
+   154 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   155 ;;
+   156 ;; *************** function _main *****************
+   157 ;; Defined at:
+   158 ;;		line 19 in file "semaforo2ruas.c"
+   159 ;; Parameters:    Size  Location     Type
+   160 ;;		None
+   161 ;; Auto vars:     Size  Location     Type
+   162 ;;		None
+   163 ;; Return value:  Size  Location     Type
+   164 ;;                  1    wreg      void 
+   165 ;; Registers used:
+   166 ;;		wreg, status,2, status,0, pclath, cstack
+   167 ;; Tracked objects:
+   168 ;;		On entry : B00/0
+   169 ;;		On exit  : 0/0
+   170 ;;		Unchanged: 0/0
+   171 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   172 ;;      Params:         0       0       0       0
+   173 ;;      Locals:         0       0       0       0
+   174 ;;      Temps:          3       0       0       0
+   175 ;;      Totals:         3       0       0       0
+   176 ;;Total ram usage:        3 bytes
+   177 ;; Hardware stack levels required when called: 1
+   178 ;; This function calls:
+   179 ;;		_configuracao
+   180 ;; This function is called by:
+   181 ;;		Startup code after reset
+   182 ;; This function uses a non-reentrant model
+   183 ;;
+   184                           
+   185                           
+   186                           ;psect for function _main
+   187  07B7                     _main:
+   188  07B7                     l610:	
+   189                           ;incstack = 0
+   190                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   191                           
+   192                           
+   193                           ;semaforo2ruas.c: 21:     configuracao();
+   194  07B7  27B0               	fcall	_configuracao
+   195  07B8                     l612:
+   196                           
+   197                           ;semaforo2ruas.c: 23:     {;semaforo2ruas.c: 24:         PORTB = 0x24;
+   198  07B8  3024               	movlw	36
+   199  07B9  1283               	bcf	3,5	;RP0=0, select bank0
+   200  07BA  1303               	bcf	3,6	;RP1=0, select bank0
+   201  07BB  0086               	movwf	6	;volatile
+   202  07BC                     l614:
+   203                           
+   204                           ;semaforo2ruas.c: 25:         _delay((unsigned long)((2000)*(4000000/4000.0)));
+   205  07BC  300B               	movlw	11
+   206  07BD  00F2               	movwf	??_main+2
+   207  07BE  3026               	movlw	38
+   208  07BF  00F1               	movwf	??_main+1
+   209  07C0  305D               	movlw	93
+   210  07C1  00F0               	movwf	??_main
+   211  07C2                     u17:
+   212  07C2  0BF0               	decfsz	??_main,f
+   213  07C3  2FC2               	goto	u17
+   214  07C4  0BF1               	decfsz	??_main+1,f
+   215  07C5  2FC2               	goto	u17
+   216  07C6  0BF2               	decfsz	??_main+2,f
+   217  07C7  2FC2               	goto	u17
+   218  07C8  2FC9               	nop2
+   219  07C9                     l616:
+   220                           
+   221                           ;semaforo2ruas.c: 26:         PORTB = 0x22;
+   222  07C9  3022               	movlw	34
+   223  07CA  1283               	bcf	3,5	;RP0=0, select bank0
+   224  07CB  1303               	bcf	3,6	;RP1=0, select bank0
+   225  07CC  0086               	movwf	6	;volatile
+   226  07CD                     l618:
+   227                           
+   228                           ;semaforo2ruas.c: 27:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+   229  07CD  3006               	movlw	6
+   230  07CE  00F2               	movwf	??_main+2
+   231  07CF  3013               	movlw	19
+   232  07D0  00F1               	movwf	??_main+1
+   233  07D1  30AD               	movlw	173
+   234  07D2  00F0               	movwf	??_main
+   235  07D3                     u27:
+   236  07D3  0BF0               	decfsz	??_main,f
+   237  07D4  2FD3               	goto	u27
+   238  07D5  0BF1               	decfsz	??_main+1,f
+   239  07D6  2FD3               	goto	u27
+   240  07D7  0BF2               	decfsz	??_main+2,f
+   241  07D8  2FD3               	goto	u27
+   242  07D9  2FDA               	nop2
+   243  07DA                     l620:
+   244                           
+   245                           ;semaforo2ruas.c: 28:         PORTB = 0x81;
+   246  07DA  3081               	movlw	129
+   247  07DB  1283               	bcf	3,5	;RP0=0, select bank0
+   248  07DC  1303               	bcf	3,6	;RP1=0, select bank0
+   249  07DD  0086               	movwf	6	;volatile
+   250  07DE                     l622:
+   251                           
+   252                           ;semaforo2ruas.c: 29:         _delay((unsigned long)((2000)*(4000000/4000.0)));
+   253  07DE  300B               	movlw	11
+   254  07DF  00F2               	movwf	??_main+2
+   255  07E0  3026               	movlw	38
+   256  07E1  00F1               	movwf	??_main+1
+   257  07E2  305D               	movlw	93
+   258  07E3  00F0               	movwf	??_main
+   259  07E4                     u37:
+   260  07E4  0BF0               	decfsz	??_main,f
+   261  07E5  2FE4               	goto	u37
+   262  07E6  0BF1               	decfsz	??_main+1,f
+   263  07E7  2FE4               	goto	u37
+   264  07E8  0BF2               	decfsz	??_main+2,f
+   265  07E9  2FE4               	goto	u37
+   266  07EA  2FEB               	nop2
+   267  07EB                     l624:
+   268                           
+   269                           ;semaforo2ruas.c: 30:         PORTB = 0x41;
+   270  07EB  3041               	movlw	65
+   271  07EC  1283               	bcf	3,5	;RP0=0, select bank0
+   272  07ED  1303               	bcf	3,6	;RP1=0, select bank0
+   273  07EE  0086               	movwf	6	;volatile
+   274  07EF                     l626:
+   275                           
+   276                           ;semaforo2ruas.c: 31:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+   277  07EF  3006               	movlw	6
+   278  07F0  00F2               	movwf	??_main+2
+   279  07F1  3013               	movlw	19
+   280  07F2  00F1               	movwf	??_main+1
+   281  07F3  30AD               	movlw	173
+   282  07F4  00F0               	movwf	??_main
+   283  07F5                     u47:
+   284  07F5  0BF0               	decfsz	??_main,f
+   285  07F6  2FF5               	goto	u47
+   286  07F7  0BF1               	decfsz	??_main+1,f
+   287  07F8  2FF5               	goto	u47
+   288  07F9  0BF2               	decfsz	??_main+2,f
+   289  07FA  2FF5               	goto	u47
+   290  07FB  2FFC               	nop2
+   291                           
+   292                           ;semaforo2ruas.c: 32:     }
+   293  07FC  2FB8               	goto	l612
+   294  07FD  2800               	ljmp	start
+   295  07FE                     __end_of_main:
+   296                           
+   297                           	psect	text1
+   298  07B0                     __ptext1:	
+   299 ;; *************** function _configuracao *****************
+   300 ;; Defined at:
+   301 ;;		line 13 in file "semaforo2ruas.c"
+   302 ;; Parameters:    Size  Location     Type
+   303 ;;		None
+   304 ;; Auto vars:     Size  Location     Type
+   305 ;;		None
+   306 ;; Return value:  Size  Location     Type
+   307 ;;                  1    wreg      void 
+   308 ;; Registers used:
+   309 ;;		status,2
+   310 ;; Tracked objects:
+   311 ;;		On entry : 0/0
+   312 ;;		On exit  : 0/0
+   313 ;;		Unchanged: 0/0
+   314 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   315 ;;      Params:         0       0       0       0
+   316 ;;      Locals:         0       0       0       0
+   317 ;;      Temps:          0       0       0       0
+   318 ;;      Totals:         0       0       0       0
+   319 ;;Total ram usage:        0 bytes
+   320 ;; Hardware stack levels used: 1
+   321 ;; This function calls:
+   322 ;;		Nothing
+   323 ;; This function is called by:
+   324 ;;		_main
+   325 ;; This function uses a non-reentrant model
+   326 ;;
+   327                           
+   328                           
+   329                           ;psect for function _configuracao
+   330  07B0                     _configuracao:
+   331  07B0                     l608:	
+   332                           ;incstack = 0
+   333                           ; Regs used in _configuracao: [status,2]
+   334                           
+   335                           
+   336                           ;semaforo2ruas.c: 15:     TRISB = 0x00;
+   337  07B0  1683               	bsf	3,5	;RP0=1, select bank1
+   338  07B1  1303               	bcf	3,6	;RP1=0, select bank1
+   339  07B2  0186               	clrf	6	;volatile
+   340                           
+   341                           ;semaforo2ruas.c: 16:     PORTB = 0x00;
+   342  07B3  1283               	bcf	3,5	;RP0=0, select bank0
+   343  07B4  1303               	bcf	3,6	;RP1=0, select bank0
+   344  07B5  0186               	clrf	6	;volatile
+   345  07B6                     l9:
+   346  07B6  0008               	return
+   347  07B7                     __end_of_configuracao:
+   348  007E                     btemp	set	126	;btemp
+   349  007E                     wtemp0	set	126
+   350                           
+   351                           	psect	config
+   352                           
+   353                           ;Config register CONFIG @ 0x2007
+   354                           ;	Oscillator Selection bits
+   355                           ;	FOSC = XT, XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN
+   356                           ;	Watchdog Timer Enable bit
+   357                           ;	WDTE = OFF, WDT disabled
+   358                           ;	Power-up Timer Enable bit
+   359                           ;	PWRTE = OFF, PWRT disabled
+   360                           ;	RA5/MCLR/VPP Pin Function Select bit
+   361                           ;	MCLRE = ON, RA5/MCLR/VPP pin function is MCLR
+   362                           ;	Brown-out Detect Enable bit
+   363                           ;	BOREN = OFF, BOD disabled
+   364                           ;	Low-Voltage Programming Enable bit
+   365                           ;	LVP = OFF, RB4/PGM pin has digital I/O function, HV on MCLR must be used for programmi
+      +                          ng
+   366                           ;	Data EE Memory Code Protection bit
+   367                           ;	CPD = OFF, Data memory code protection off
+   368                           ;	Flash Program Memory Code Protection bit
+   369                           ;	CP = ON, 0000h to 07FFh code-protected
+   370  2007                     	org	8199
+   371  2007  1F29               	dw	7977
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      3       3
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK2            48      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0       0
+                                              0 COMMON     3     3      0
+                       _configuracao
+ ---------------------------------------------------------------------------------
+ (1) _configuracao                                         0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _configuracao
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            E      0       0       0        0.0%
+EEDATA              80      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMMON               E      3       3       1       21.4%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               50      0       0       3        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0       0       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR2              0      0       0       5        0.0%
+SFR2                 0      0       0       5        0.0%
+BITBANK1            50      0       0       6        0.0%
+BANK1               50      0       0       7        0.0%
+BITBANK2            30      0       0       8        0.0%
+BANK2               30      0       0       9        0.0%
+DATA                 0      0       0      10        0.0%
+
+
+Microchip Technology PIC Macro Assembler V2.32 build 20210201212658 
+Symbol Table                                                                                   Mon Oct 04 20:16:23 2021
+
+                      l9 07B6            ?_configuracao 0070                       u17 07C2  
+                     u27 07D3                       u37 07E4                       u47 07F5  
+                    l610 07B7                      l620 07DA                      l612 07B8  
+                    l622 07DE                      l614 07BC                      l608 07B0  
+                    l624 07EB                      l616 07C9                      l626 07EF  
+                    l618 07CD                     _main 07B7                     btemp 007E  
+                   start 0000           ??_configuracao 0070                    ?_main 0070  
+                  _PORTB 0006                    _TRISB 0086                    status 0003  
+                  wtemp0 007E          __initialization 07FE             __end_of_main 07FE  
+                 ??_main 0070     __end_of_configuracao 07B7  __end_of__initialization 07FE  
+         __pcstackCOMMON 0070               __pmaintext 07B7                  __ptext1 07B0  
+  __size_of_configuracao 0007     end_of_initialization 07FE             _configuracao 07B0  
+    start_initialization 07FE                ___latbits 0000            __size_of_main 0047  

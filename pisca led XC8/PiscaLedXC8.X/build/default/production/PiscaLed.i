@@ -1145,7 +1145,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\xc.h" 2 3
 # 10 "PiscaLed.c" 2
-# 24 "PiscaLed.c"
+# 35 "PiscaLed.c"
 const int tempo = 1000;
 
 void configuracao()
@@ -1158,6 +1158,9 @@ void configuracao()
     PORTBbits.RB2 = 0;
     PORTBbits.RB1 = 0;
     PORTBbits.RB0 = 0;
+    PORTBbits.RB7 = 0;
+    PORTBbits.RB6 = 0;
+    PORTBbits.RB5 = 0;
 }
 
 void main()
@@ -1165,14 +1168,24 @@ void main()
     configuracao();
     for(;;)
     {
-        PORTBbits.RB2 = 0;
-        PORTBbits.RB0 = 1;
-        _delay((unsigned long)((tempo)*(4000000/4000.0)));
-        PORTBbits.RB0 = 0;
-        PORTBbits.RB1 = 1;
-        _delay((unsigned long)((tempo)*(4000000/4000.0)));
-        PORTBbits.RB1 = 0;
         PORTBbits.RB2 = 1;
-        _delay((unsigned long)((tempo)*(4000000/4000.0)));
+        PORTBbits.RB5 = 1;
+        _delay((unsigned long)((2000)*(4000000/4000.0)));
+        PORTBbits.RB2 = 0;
+        PORTBbits.RB1 = 1;
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+        PORTBbits.RB1 = 0;
+        PORTBbits.RB0 = 1;
+        PORTBbits.RB5 = 0;
+        PORTBbits.RB7 = 1;
+        _delay((unsigned long)((2000)*(4000000/4000.0)));
+        PORTBbits.RB7 = 0;
+        PORTBbits.RB6 = 1;
+        _delay((unsigned long)((1000)*(4000000/4000.0)));
+        PORTBbits.RB6 = 0;
+        PORTBbits.RB5 = 1;
+        PORTBbits.RB0 = 0;
+        PORTBbits.RB2 = 1;
+        _delay((unsigned long)((2000)*(4000000/4000.0)));
     }
 }

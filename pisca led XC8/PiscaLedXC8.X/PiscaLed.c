@@ -14,12 +14,23 @@
 #define amarelo PORTBbits.RB1
 #define verde PORTBbits.RB2
 
+#define vermelho2 PORTBbits.RB5
+#define amarelo2 PORTBbits.RB6
+#define verde2 PORTBbits.RB7
+
 #define apaga_verde verde = 0
 #define acende_verde verde = 1
 #define apaga_amarelo amarelo = 0
 #define acende_amarelo amarelo = 1
 #define apaga_vermelho vermelho = 0
 #define acende_vermelho vermelho = 1
+
+#define apaga_verde2 verde2 = 0
+#define acende_verde2 verde2 = 1
+#define apaga_amarelo2 amarelo2 = 0
+#define acende_amarelo2 amarelo2 = 1
+#define apaga_vermelho2 vermelho2 = 0
+#define acende_vermelho2 vermelho2 = 1
 
 const int tempo = 1000;
 
@@ -33,6 +44,9 @@ void configuracao()
     apaga_verde; 
     apaga_amarelo; 
     apaga_vermelho; 
+    apaga_verde2; 
+    apaga_amarelo2; 
+    apaga_vermelho2; 
 }
 
 void main()
@@ -40,14 +54,24 @@ void main()
     configuracao(); //Chama rotina de configuração acima
     for(;;) //Laço infinito
     {
-        apaga_verde; 
-        acende_vermelho; 
-        __delay_ms(tempo); 
-        apaga_vermelho; 
-        acende_amarelo; 
-        __delay_ms(tempo); 
-        apaga_amarelo; 
-        acende_verde; 
-        __delay_ms(tempo); 
+        acende_verde;
+        acende_vermelho2;
+        __delay_ms(2000);
+        apaga_verde;
+        acende_amarelo;
+        __delay_ms(1000);
+        apaga_amarelo;
+        acende_vermelho;
+        apaga_vermelho2;
+        acende_verde2;
+        __delay_ms(2000);
+        apaga_verde2;
+        acende_amarelo2;
+        __delay_ms(1000);
+        apaga_amarelo2;
+        acende_vermelho2;
+        apaga_vermelho;
+        acende_verde;
+        __delay_ms(2000);
     }
 }
